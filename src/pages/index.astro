@@ -1,0 +1,115 @@
+---
+// component import
+import MainLayout from "../layouts/MainLayout.astro"
+const isGreen = false
+---
+<!-- 
+let's talk about the website
+it's a simple blog containing two sections
+1. Home page, about me, it has a picture and information about me
+
+2. blog posts section
+
+3. (someday) projects section 
+-->
+
+
+
+
+<MainLayout title="غسان فائدي" description="الصفحة الرئيسية">
+	<nav>
+		<ul>
+			<li>الصفحة الرئيسية</li>
+			<li>تدويناتي</li>
+			<li>المشاريع</li>
+		</ul>
+	</nav>
+	
+	<header>
+		<img class="pfp" src="images/pfp.jpg" alt="صورتي">
+		<div>
+			<p>
+				<h3>غسان فائدي</h3>
+
+				<ul >
+					<li>طالب في جامعة ISIM صفاقس</li>
+					<li>أحب البرمجة وتطوير مواقع الويب</li>
+					<li>البريد الإلكتروني: gha.faidi@gmail.com</li>
+				</ul>
+				
+			</p>
+
+		</div>
+		
+	</header>
+<main>
+<article>
+	<h3>السلام عليكم</h3>
+	<p>اسمي غسان فائدي، أحب البرمجة...</p>
+</article>
+	
+</main>
+
+	<!-- <p class:list={["par", {green : isGreen}]}>مرحبا</p> -->
+</MainLayout>
+
+<style>
+	body {
+		background-color: #FEFEFE;
+		color: #232323;
+		
+		margin: 0 auto;
+	}
+	.pfp {
+		width: 140px;
+		border-radius: 4px;
+	}
+	header {
+		display: flex;
+		align-items: center;
+		width: 60%;
+		margin: 20px auto;
+	}
+	
+	div {
+		margin-right: 20px;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	nav {
+		box-shadow:
+  0px 0.2px 2.7px rgba(0, 0, 0, 0.04),
+  0px 0.4px 6.9px rgba(0, 0, 0, 0.028),
+  0px 0.9px 14.2px rgba(0, 0, 0, 0.022),
+  0px 1.8px 29.2px rgba(0, 0, 0, 0.018),
+  0px 5px 80px rgba(0, 0, 0, 0.012);
+  background-color: white;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	margin-right: 20%;
+}
+nav ul li {
+	padding: 10px 20px;
+}
+nav ul li:nth-child(1) {
+	padding-right: 0;
+}
+
+main {
+	width: 60%;
+	margin: 10px auto;
+}
+
+h3 {
+	margin-bottom: 5px;
+}
+p {
+	margin-top: 5px ;
+}
+</style>
